@@ -34,9 +34,9 @@ class Test_leer_grafo_stdin(unittest.TestCase):
             res_edges = ans[1]            
 
             #Testeo los tipos del resultado
-            self.assertIs(type(ans), type(()))    #Result is tuple
-            self.assertIs(type(res_verts), type([]))  #Fst elem is list
-            self.assertIs(type(res_edges), type([]))  #Snd elem is list
+            self.assertIs(type(ans), type(()))    #Resultado es tupla
+            self.assertIs(type(res_verts), type([]))  #Fst elem es lista
+            self.assertIs(type(res_edges), type([]))  #Snd elem es lista
             #Testeo los vertices del resultado
             for v in test_verts:
                 self.assertIn(v, res_verts)
