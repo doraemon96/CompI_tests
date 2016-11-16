@@ -4,7 +4,7 @@
 
 '''Para probar nombrar el archivo de practica '''
 ''' como practica2.py y correr el test con    '''
-''' >>>python practica2_test.py                 '''
+''' >>>python practica2_test.py               '''
 
 import unittest
 import tempfile
@@ -51,6 +51,7 @@ class Test_find(unittest.TestCase):
 #TODO
 
 
+
 #Test union()
 class Test_union(unittest.TestCase):
 
@@ -69,5 +70,28 @@ class Test_union(unittest.TestCase):
             ans = p2.union(id_1, id_2, dset)
 
             self.assertIs(type(ans), type({}))   #Resultado es dict
-            self.assertTrue(len(ans) < len(dset))   #Achica tamaño
+            if (id_1 in test_case.values()) and (id_2 in test_case.values()):
+                self.assertTrue(len(ans) < len(test_case))   #Une al menos dos conjuntos
+#TODO
             
+
+
+#Test componentes_conexas()
+class Test_componentes_conexas(unittest.TestCase):
+
+    test_cases = [
+    
+    
+    
+                 ]
+
+    def test(self):
+        for test_case in test_cases:
+            #Obtengo el resultado de la funcion
+            ans = p2.componentes_conexas(test_case)
+
+            #Testeo los tipos del resultado
+            self.assertIs(type(ans), type([]))   #Resultado es list
+            for e in ans:
+                self.assertIs(type(e), type([]))   #Componentes son list
+#TODO
